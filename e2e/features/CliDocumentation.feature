@@ -1,9 +1,13 @@
-@cliDocumentation @test
+@cliDocumentation @feature1
 Feature: CLI Documentation
   As a user
   I want the ability to navigate to the offical CLI Documentation
   So that I can become a better developer
 
-  Scenario: Access CLI Documentation via my website
+  @feature1Scenario1
+  Scenario: Feature 1 Scenario 1
     Given I navigate to "CLI Documentation"
-    Then I should be on the angular wiki page
+
+  @feature1Scenario2
+  Scenario: Feature 1 Scenario 2
+    Given I navigate to "CLI Documentation"

@@ -23,6 +23,12 @@ Before({ tags: '@wip' }, async function() {
 Before({}, async function() {
   await browser.waitForAngularEnabled(true); // Only use if it's an angular app
   await browser.get(browser.params.hostname);
+  browser.getCapabilities().then((c) => {
+    const encodedBrowserName = Buffer.from('Browser:' + c.get('browserName')).toString(
+      'base64'
+    );
+    this.attach(encodedBrowserName, 'application/json');
+  });
 });
 
 After({}, async function(result: HookScenarioResult) {

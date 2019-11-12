@@ -8,7 +8,8 @@
     "start": "ng serve",
     "webdriver": "webdriver-manager update && webdriver-manager start",
     "test": "ng test",
-    "e2e": "tsc && protractor dist/e2e/config.js"
+    "e2e": "tsc && protractor dist/e2e/config.js",
+    "report": "java -jar e2e/support/cucumber-sandwich.jar -n -f reports/jsonReports -o reports/"
   },
   "private": true,
   "dependencies": {
@@ -32,17 +33,19 @@
     "@angular/compiler-cli": "^6.0.0",
     "@angular/language-service": "^6.0.0",
     "@types/cucumber": "^4.0.7",
+    "@types/lodash": "^4.14.108",
     "@types/node": "^12.11.7",
     "chai": "^4.2.0",
     "codelyzer": "~4.2.1",
     "cucumber": "^5.0.1",
     "gulp": "^4.0.2",
+    "lodash": "^4.17.5",
     "moment": "^2.24.0",
     "protractor": "^5.4.2",
     "protractor-cucumber-framework": "^6.1.3",
     "ts-node": "~5.0.1",
     "tslint": "~5.9.1",
-    "typescript": "~2.7.2",
+    "typescript": "~2.8",
     "webdriver-manager": "^12.1.7",
     "webpack": "^4.41.2"
   }
